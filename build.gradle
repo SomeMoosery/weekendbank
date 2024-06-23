@@ -4,9 +4,6 @@ plugins {
     id 'application'
 }
 
-group = "org.weekend"
-version = "1.0-SNAPSHOT"
-
 repositories {
     mavenCentral()
 }
@@ -21,13 +18,7 @@ application {
     mainClass = 'com.weekendbank.BankApplication'
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
 run {
-    // Specifies the main class to run
-    mainClass = 'com.weekendbank.BankApplication'
     // Includes the necessary command line arguments
     args = ['server', 'src/main/resources/config.yml']
 }
